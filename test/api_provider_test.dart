@@ -4,10 +4,10 @@ import 'package:web_request/app/data/provider/api_provider.dart';
 void main() {
   final _apiProvider = ApiProvider();
   test(
-    'return todoModel',
+    'Retorna a instância de TodoModel',
     () async {
       final todoLists = await _apiProvider.fetch();
-      print(todoLists[2].title);
+      print(todoLists[0].completed);
     },
   );
 }
