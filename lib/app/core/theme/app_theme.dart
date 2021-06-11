@@ -4,10 +4,18 @@ import 'app_text_style.dart';
 
 class AppTheme {
   final ThemeData appThemeData = ThemeData.light().copyWith(
+    // Cor do background
     scaffoldBackgroundColor: appBackgroundColor,
     brightness: Brightness.light,
     primaryColor: appPrimeryColor,
-    textTheme: AppTextTheme().appTextThemeLight,
+    // Theme padrão
+    textTheme: AppTextTheme.appTextThemeLight,
+    // Personaizando AppBar
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      textTheme: AppTextTheme.appTextThemeLight,
+    ),
+    // Cor do botão ElevatedButton
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(appPrimeryColor),
@@ -18,3 +26,5 @@ class AppTheme {
     ),
   );
 }
+
+double appDefaultPadding = 16;
